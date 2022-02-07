@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Merriweather+Sans&display=swap");
+
+:root {
+  /*Polices*/
+  --police-principale: "Lato";
+  --police-titres: "Merriweather Sans";
+
+  /*Palette de couleurs*/
+  --clr-principale: #212e53;
+  --clr-accent: #bed3c3;
+  --clr-sombre: #111;
+  --clr-claire: #efefef;
+
+  /*Mesures*/
+  --largeur-contenus: 85%;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Base */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--police-principale);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--police-titres);
+}
+
+a {
+  color: #666;
+}
+
+.conteneur {
+  display: block;
+  width: var(--largeur-contenus);
+  margin: 0 auto;
+}
+
+.fluide {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.v-aligne {
+  display: flex;
+  align-items: center;
+}
+
+/* Grille */
+
+.flex {
+  display: flex;
+  gap: 2em;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.quart {
+  flex-basis: 25%;
+}
+
+.demi {
+  flex-basis: 50%;
+}
+
+.trois-quart {
+  flex-basis: 75%;
+}
+
+header {
+  height: 150px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 a {
+  color: #222;
+  text-decoration: none;
+}
+/* Menus */
+
+.menu {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: block;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: #222;
+  padding: 5px 10px;
+  font-weight: bold;
+  transition: all 300ms ease;
+  border-radius: 3px;
+}
+
+.menu a:hover {
+  background-color: #333;
+  color: #efefef;
+  font-weight: normal;
+}
+
+/* Contenus */
+
+.quart img {
+  margin-top: 22px;
+}
+
+.image-article {
+  margin-top: 66px;
+}
+
+.post {
+  margin: 20px 0;
+}
+
+.sidebar {
+  margin-left: 50px;
+}
+
+.widget-container {
+  border: 1px solid #ccc;
+  height: 300px;
+  margin-top: 20px;
+}
+
+footer {
+  height: 120px;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    justify-content: center;
+  }
+
+  header,
+  footer {
+    text-align: center;
+  }
+
+  .conteneur {
+    width: 95%;
+  }
+
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  .quart {
+    flex-basis: 100%;
+  }
+
+  .quart img {
+    margin-top: 0;
+  }
+
+  .demi {
+    flex-basis: 100%;
+  }
+
+  .trois-quart {
+    flex-basis: 100%;
+  }
+
+  article {
+    margin-bottom: 100px;
+  }
+
+  .sidebar {
+    margin-left: 0;
+  }
+}
