@@ -1,17 +1,15 @@
 <?php get_header()?>
 
-    <?php if(have_posts( )) : ?>
-    <?php while(have_posts( )) : the_post(  ); ?>
+    <div class="flex">
 
-        <article class="flex">
-            <!-- Le contenu de l'article -->
-            <div class="texte-article">
-            <h2><?php the_title(); ?></h2>
-            <p><?php the_content( );?></p>
-            </div>
-        </article>
+        <section class="trois-quart">
+            <?php get_template_part( 'templates/generic-loop'); ?>
+        </section>
 
-        <?php endwhile;?>
-        <?php endif; ?>
+        <section class="quart sidebar">
+            <!--sidebar-->
+        </section>
+
+    </div>
 
 <?php get_footer( ) ?>
