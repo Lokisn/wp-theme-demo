@@ -76,6 +76,15 @@ a {
   gap: 2em;
 }
 
+.align-right {
+  justify-content: flex-end;
+}
+
+input {
+  margin-bottom: 40px;
+  border: 2px solid black;
+}
+
 .space-between {
   justify-content: space-between;
 }
