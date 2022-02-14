@@ -7,7 +7,7 @@
         </section>
 
         <section class="quart sidebar">
-            <!--sidebar-->
+            <?php get_sidebar(  ); ?>
         </section>
 
     </div>
