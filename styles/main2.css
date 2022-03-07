@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=Oxygen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&family=Oxygen&display=swap");
+h1 {
+  font-family: "Oxygen";
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Karla";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla";
+}
+@media screen and (max-width: 500px) {
+  body {
+    /* Version mobile */
+  }
+}
+body header {
+  background-color: #333533;
+}
+body header .conteneur {
+  display: flex;
+}
+body header .conteneur nav {
+  width: 100%;
+}
+body header .conteneur nav ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+body header .conteneur nav ul li {
+  padding: 1rem;
+}
+body header .conteneur nav ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+  color: #222;
+  background-color: #ffd100;
+}
+body header .conteneur nav ul li a {
+  text-decoration: none;
+  color: #202020;
+}
+body header .conteneur nav ul li a:visited {
+  color: #202020;
+}
+body header .conteneur nav ul li a:hover {
+  color: #9b9b9b;
+}
+body header .conteneur nav ul li a:active {
+  color: #9b9b9b;
+}

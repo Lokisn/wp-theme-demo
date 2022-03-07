@@ -1,0 +1,48 @@
+//fichier de fonction utilitaire à réutiliser
+
+@mixin link(
+  $normalColor,
+  $hoverColor,
+  $visitedColor,
+  $activeColor,
+  $underlined: false
+) {
+  & {
+    // operation ternaire (if/else sur une seule ligne)
+    text-decoration: if($underlined, underlined, none);
+    color: $normalColor;
+
+    &:visited {
+      color: $visitedColor;
+    }
+    &:hover {
+      color: $hoverColor;
+    }
+    &:active {
+      color: $activeColor;
+    }
+  }
+}
+
+// Dimension écran / Mobile / Tablette / Desktop
+$small: 500px;
+$medium: 1024px;
+$large: 1280px;
+
+@mixin small {
+  @media screen and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (max-width: $large) {
+    @content;
+  }
+}
