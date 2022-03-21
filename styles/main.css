@@ -172,6 +172,27 @@ h1 a {
   margin-top: 20px;
 }
 
+.splide {
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.splide .splide__slide {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.galerie {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10vh;
+}
+
 footer {
   height: 120px;
   border-top: 1px solid #ccc;

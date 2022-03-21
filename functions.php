@@ -3,11 +3,30 @@
 // Lier la feuille de style et les fonts au projet 
 
 function simplenews_enqueue_styles(){
+    
     // Ajout des fonts à l'aide d'une variable
+
     wp_enqueue_style( 'latofont', 'https://fonts.googleapis.com/css2?family=Lato&display=swap' );
+
     wp_enqueue_style( 'merrifont', 'https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap' );
 
     wp_enqueue_style( 'maincss', get_template_directory_uri() . '/styles/main.css', array('latofont', 'merrifont')  );
+
+    // Intégrer la librairie Splide [JS + CSS] (nom + lien)
+
+    wp_enqueue_script( 'splidejs', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js');
+
+    wp_enqueue_style( 'splidecss', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css');
+    
+    // Intégrer la librairie Lightbox [JS + CSS] (nom + lien)
+    
+    wp_enqueue_script( 'lightboxjs', get_template_directory_uri()."/js/simpleLightbox.min.js");
+    
+    wp_enqueue_style( 'lightboxcss', get_template_directory_uri()."/styles/simpleLightbox.min.css");
+    
+    // Intégration du main Javascript 
+
+    wp_enqueue_script( 'mainjs', get_template_directory_uri()."/js/main.js", array('splidejs') );
 }
 
 add_action( 'wp_enqueue_scripts', 'simplenews_enqueue_styles' );
