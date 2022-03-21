@@ -34,8 +34,7 @@ Template Name: Gabarit reportages
             <?php endif ?>
             <div>
                 <p><b><?php echo get_field('date')?></b></p>
-                <p><?php echo get_field('lieu_tournage')?></p>
-                <p><a href="<?=the_permalink();?>"><?php echo get_field('lien_reporter')?></a></p>     
+                <p><?php echo get_field('lieu_tournage')?></p>     
             </div>
             <p><i><?php echo get_field('reportages')?></i></p>
 

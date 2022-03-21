@@ -13,7 +13,7 @@ Template Name: Gabarit reporter
         $args = array(
             'category_name' => 'reporters',
             'order' => 'title',
-            'order_by' => 'ASC'
+            'orderby' => 'ASC'
         );
 
         $query = new WP_Query($args);
@@ -21,6 +21,7 @@ Template Name: Gabarit reporter
         if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post();
     ?>
+    <a href="<?php echo get_the_permalink()?>">
         <article>
 
             <h3><?php echo get_field('prenom')?>&nbsp;<?php echo get_field('nom') ?></h3>
@@ -38,7 +39,7 @@ Template Name: Gabarit reporter
                 <p>Années d'expériences : <?php echo get_field('annees_dexperiences')?></p>
 
         </article>
-
+    </a>
     <?php 
         endwhile;
         endif;
