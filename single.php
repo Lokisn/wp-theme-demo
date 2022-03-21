@@ -1,37 +1,24 @@
 <?php get_header()?>
 
-    <h2><?php the_title(); ?></h2>
-    <div class="flex">
-        <section class="trois-quart">
+<?php 
 
-            <?php if(have_posts( )) : ?>
-            <?php while(have_posts( )) : the_post(  ); ?>
+if (in_category('reporters')) {
+
+    // Catégorie reporters
+    get_template_part('templates/parts/single', 'reporters');
+
+} else if(in_category('reportages')){
+    // Catégorie reportages
+    get_template_part('templates/parts/single', 'reportages');
+
+} else {
+
+    // Tout autres articles
+    get_template_part('templates/parts/single', 'news');
+
+}
 
 
-            <article class="flex">
-
-                <!-- L'image de l'article -->
-                <div class="image-article quart">
-
-                    <?php if(has_post_thumbnail( )) : ?>
-
-                    <?php the_post_thumbnail('small', ['class' => 'fluide']); ?>
-
-                    <?php endif; ?>
-
-                </div>
-
-                <!-- Le contenu de l'article -->
-                <div class="texte-article trois-quart">
-                    <p><?php the_content( );?></p>
-                    <p>Consultez d'autres articles dans la catégorie : <?php the_category( ',' );?>.</p>
-                </div>
-
-            </article>
-
-            <?php endwhile;?>
-            <?php endif; ?>
-        </section>
-        </div>
+?>
     
 <?php get_footer( ) ?>
