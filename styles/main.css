@@ -6,10 +6,10 @@
   --police-titres: "Merriweather Sans";
 
   /*Palette de couleurs*/
-  --clr-principale: #212e53;
-  --clr-accent: #bed3c3;
-  --clr-sombre: #111;
-  --clr-claire: #efefef;
+  --clr-principale: #2E5EAA;
+  --clr-accent: #91BDCA;
+  --clr-sombre: #11262D;
+  --clr-claire: #DFE0E2;
 
   /*Mesures*/
   --largeur-contenus: 85%;
@@ -50,10 +50,6 @@ h6 {
 
 a {
   color: #666;
-}
-
-h3 a {
-  color: var(--clr-principale);
 }
 
 .conteneur {
@@ -120,6 +116,7 @@ h1 a {
   color: #222;
   text-decoration: none;
 }
+
 /* Menus */
 
 .menu {
@@ -170,27 +167,6 @@ h1 a {
 
 .widget-container {
   margin-top: 20px;
-}
-
-.splide {
-  width: 50%;
-  margin: 1rem auto;
-}
-
-.splide .splide__slide {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.galerie {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10vh;
 }
 
 footer {
